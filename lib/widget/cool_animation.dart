@@ -7,8 +7,8 @@ class CoolAnimation extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: DraggableCard(
-        child: FlutterLogo(
-          size: 128,
+        child: const Image(
+        image: NetworkImage('https://cdn.discordapp.com/attachments/782374381665779742/784963395380051978/money_2.png'),
         ),
       ),
     );

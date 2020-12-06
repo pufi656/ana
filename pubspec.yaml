@@ -32,6 +32,10 @@ dependencies:
   charts_flutter: ^0.6.0
   equatable: ^1.2.5
   path_drawing: ^0.4.1+1
+  carousel_slider: ^2.3.1
+  google_fonts: ^1.1.1
+  infinite_scroll_pagination: ^2.2.2
+  pie_chart: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -43,10 +47,14 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+  uses-material-design: true
+
+  assets:
+    - ./lib/src/icons/
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   # assets:

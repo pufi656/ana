@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dashboard.dart';
+import 'cards.dart';
+import 'stats.dart';
 
 void main() {
   // raluca was here
@@ -53,8 +55,8 @@ class _MyHomePageState extends State<MyHomePage> {
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
     Dashboard(),
-    Dashboard(),
-    Dashboard(),
+    Cards(),
+    Stats(),
     Text(
       'Index 0: Home',
       style: optionStyle,

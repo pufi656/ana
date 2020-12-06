@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'widget/line_chart_widget.dart';
-import 'widget/cool_animation.dart';
 import 'widget/list.dart';
 
 class Dashboard extends StatelessWidget {
+
 
   final List<Color> _colors = [
     Color(0xff001f33),
@@ -69,7 +69,7 @@ class Dashboard extends StatelessWidget {
           child: Container(
             width: double.infinity,
             height: 392,
-            child: VerticalList(),
+            child: VerticalList([15, 20, 25, 30, 35, 40]),
           ),
         ),
     ]),

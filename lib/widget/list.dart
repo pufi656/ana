@@ -4,7 +4,11 @@ import 'element_list.dart';
 
 class VerticalList extends StatelessWidget {
 
-  final List<int> _cheltuieli = [15, 20, 25, 30, 35, 40];
+  final List<int> _cheltuieli;
+  VerticalList(
+        @required this._cheltuieli,
+      );
+
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +37,9 @@ class VerticalList extends StatelessWidget {
                 thickness: 2,
                 endIndent: 0,
               ),
-              ElementList(_cheltuieli),
-              ElementList(_cheltuieli),
+              Column(children: [
+                for (var i in _cheltuieli) ElementList(i)
+              ]),
             ],
           ),
         ),

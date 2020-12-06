@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ElementList extends StatelessWidget {
 
-  final List<int> cheltuieli;
+  final int cheltuieli;
 
   ElementList(
         @required this.cheltuieli
@@ -14,17 +14,22 @@ class ElementList extends StatelessWidget {
         color: Color(0xff006bb3).withOpacity(0.4),
         child: Column(
       children: <Widget>[
-        Text(
-          'data',
-          textAlign: TextAlign.center,
-          style: new TextStyle(
-            fontSize: 25.0,
-            height: 1.5,
-            color: Colors.white,
-          ),
+        Container(
+            margin: EdgeInsets.only(right: 30),
+          child: Align(
+            alignment: Alignment.centerRight,
+            child:Text(
+              '12.12.2012',
+              style: new TextStyle(
+                fontSize: 20.0,
+                height: 1.5,
+                color: Colors.white,
+              ),
+            )
+          )
         ),
         Text(
-          'suma',
+          '$cheltuieli',
           textAlign: TextAlign.center,
           style: new TextStyle(
             fontSize: 25.0,
@@ -43,7 +48,7 @@ class ElementList extends StatelessWidget {
         ),
         const Divider(
           color: Color(0xff003d66),
-          height: 20,
+          height: 0,
           thickness: 2,
           endIndent: 0,
         )],
