@@ -3,10 +3,17 @@ import 'package:flutter/material.dart';
 class ElementList extends StatelessWidget {
 
   final int cheltuieli;
+  final String data;
+  final String loc;
+  final String categorie;
 
-  ElementList(
-        @required this.cheltuieli
-      );
+  ElementList({
+    @required this.cheltuieli,
+    @required this.data,
+    @required this.loc,
+    @required this.categorie
+  }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +26,7 @@ class ElementList extends StatelessWidget {
           child: Align(
             alignment: Alignment.centerRight,
             child:Text(
-              '12.12.2012',
+              '$data',
               style: new TextStyle(
                 fontSize: 20.0,
                 height: 1.5,
@@ -29,7 +36,7 @@ class ElementList extends StatelessWidget {
           )
         ),
         Text(
-          '$cheltuieli',
+          cheltuieli > 0 ? '+$cheltuieli RON' : '$cheltuieli RON',
           textAlign: TextAlign.center,
           style: new TextStyle(
             fontSize: 25.0,
@@ -38,7 +45,16 @@ class ElementList extends StatelessWidget {
           ),
         ),
         Text(
-          'loc_de_cheltuire',
+          '$loc',
+          textAlign: TextAlign.center,
+          style: new TextStyle(
+            fontSize: 25.0,
+            height: 1.5,
+            color: Colors.white,
+          ),
+        ),
+        Text(
+          '$categorie',
           textAlign: TextAlign.center,
           style: new TextStyle(
             fontSize: 25.0,

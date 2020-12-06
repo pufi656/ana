@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'dashboard.dart';
 import 'cards.dart';
 import 'stats.dart';
+import 'login.dart';
+import 'goals.dart';
 
 void main() {
   // raluca was here
-  runApp(MyApp());
+  runApp(Login());
 }
 
 class MyApp extends StatelessWidget {
@@ -57,10 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Dashboard(),
     Cards(),
     Stats(),
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    Goals(),
   ];
 
   void _onItemTapped(int index) {
@@ -76,6 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body:
       Center(
         child: _widgetOptions.elementAt(_selectedIndex),
+        // child: Login(),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,

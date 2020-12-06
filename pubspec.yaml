@@ -36,6 +36,7 @@ dependencies:
   google_fonts: ^1.1.1
   infinite_scroll_pagination: ^2.2.2
   pie_chart: ^4.0.1
+  percent_indicator: ^2.1.8
 
 dev_dependencies:
   flutter_test:

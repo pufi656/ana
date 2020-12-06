@@ -48,12 +48,12 @@ class LineTitles {
           ),
           getTitles: (value) {
             switch (value.toInt()) {
-              case 1:
-                return '10k';
-              case 3:
-                return '30k';
-              case 5:
-                return '50k';
+              case 4100:
+                return '4100';
+              case 2600:
+                return '2600';
+              case 1200:
+                return '1200';
             }
             return '';
           },

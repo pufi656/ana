@@ -12,7 +12,7 @@ class Stats extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     final List<Widget> graphs = [
       Transform.scale(
-        scale: 0.8,
+        scale: 1,
         child: Container(
           width: size.width * 1,
           height: size.height * 0.35,
@@ -22,7 +22,7 @@ class Stats extends StatelessWidget {
         ),
       ),
       Transform.scale(
-        scale: 0.8,
+        scale: 1,
         child: Container(
           width: size.width * 1,
           height: size.height * 0.35,
@@ -32,7 +32,7 @@ class Stats extends StatelessWidget {
         ),
       ),
       Transform.scale(
-        scale: 1.15,
+        scale: 1.05,
         child: Container(
           width: size.width * 1,
           height: size.height * 0.35,
@@ -44,14 +44,16 @@ class Stats extends StatelessWidget {
     ];
     return Container(
         color: Color(0xff00497b),
-        child: Column(
+        child: Container(
+          margin: EdgeInsets.only(top: size.height * 0.2),
+            child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(top: size.height * 0.1, bottom: size.height * 0.03),
-              width: double.infinity,
-              height: size.height * 0.15,
-              color: Color(0xffee1d23),
-            ),
+            // Container(
+            //   margin: EdgeInsets.only(top: size.height * 0.1, bottom: size.height * 0.03),
+            //   width: double.infinity,
+            //   height: size.height * 0.15,
+            //   color: Color(0xffee1d23),
+            // ),
             CarouselSlider(
               options: CarouselOptions(height: size.height * 0.6),
               items: [0,1,2].map((i) {
@@ -70,7 +72,7 @@ class Stats extends StatelessWidget {
               }).toList(),
             )
           ],
-        )
+        )),
     );
   }
 }

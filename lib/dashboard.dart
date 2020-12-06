@@ -52,7 +52,7 @@ class Dashboard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
-                    'Balance: xxxxx RON',
+                    'Balance: 1273 RON',
                     textAlign: TextAlign.center,
                     style: new TextStyle(
                       fontSize: 25.0,
@@ -64,12 +64,18 @@ class Dashboard extends StatelessWidget {
             ])
           )
         ),
-        Transform.scale(
+
+          Transform.scale(
           scale: 1,
           child: Container(
             width: double.infinity,
-            height: 392,
-            child: VerticalList([15, 20, 25, 30, 35, 40]),
+            height: size.height * 0.52,
+            child: VerticalList(
+              cheltuieli: [-163,-237,-300,-732,-118,-105,-520,-125, 3650],
+              data: ["30/12/2020","27/12/2020","24/12/2020","21/12/2020","18/12/2020","15/12/2020","12/12/2020","03/12/2020","01/12/2020"],
+              loc: ["MegaImage", "Carturesti", "H&M", "Chirie", "Catena", "CinCin", "Intretinere", "Enel", "Salariu"],
+              categorie: ['esential', "nonesential", "nonesential", "esential", "esential", "nonesential", "esential", "esential", "esential"]
+            ),
           ),
         ),
     ]),

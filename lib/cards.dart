@@ -1,7 +1,11 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'widget/cool_animation.dart';
+import 'dart:math';
+import 'widget/cool_animation_rng.dart';
 
 class Cards extends StatelessWidget {
 
@@ -52,7 +56,7 @@ class Cards extends StatelessWidget {
                                       child: Align(
                                         alignment: Alignment.center,
                                         child: Text(
-                                          'xxxx xxxx xxxx 0000',
+                                          'xxxx xxxx xxxx ' + Random().nextInt(9).toString() + Random().nextInt(9).toString() + Random().nextInt(9).toString() + Random().nextInt(9).toString(),
                                           textAlign: TextAlign.center,
                                           style: GoogleFonts.heebo(
                                             textStyle: TextStyle(
@@ -67,8 +71,8 @@ class Cards extends StatelessWidget {
                               ),
                             Container(
                               width: 300,
-                              height: 200,
-                              child: CoolAnimation(),
+                              height: size.height * 0.42,
+                              child: CoolAnimationRNG(),
                             )
                           ]);
                         },

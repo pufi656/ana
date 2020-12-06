@@ -1555,7 +1555,7 @@ List<LineTooltipItem> defaultLineTooltipItem(List<LineBarSpot> touchedSpots) {
       fontWeight: FontWeight.bold,
       fontSize: 14,
     );
-    return LineTooltipItem((touchedSpot.y * 10000).toString() + ' RON', textStyle);
+    return LineTooltipItem((touchedSpot.y).toString() + ' RON', textStyle);
   }).toList();
 }
 
